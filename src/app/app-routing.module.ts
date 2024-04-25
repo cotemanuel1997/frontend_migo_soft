@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardManagerComponent } from './board-manager/board-manager.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'man', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
+  { path: 'forgot', component: ForgotComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];
 

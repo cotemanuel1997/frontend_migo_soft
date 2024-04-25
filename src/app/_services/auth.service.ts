@@ -37,4 +37,16 @@ export class AuthService {
     );
   }
 
+  sendEmail(to: string, subject: string, body: string): Observable<any> {
+    return this.http.post(
+      AUTH_API + 'signup',
+      {
+        to,
+        subject,
+        body,
+      },
+      httpOptions
+    );
+  }
+
 }

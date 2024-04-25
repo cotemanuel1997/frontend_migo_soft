@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './_helper/http.interceptor';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BoardUserComponent } from './board-user/board-user.component';
     BoardAdminComponent,
     BoardManagerComponent,
     ProfileComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    ForgotComponent
   ],
   imports: [
     BrowserModule,
