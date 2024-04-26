@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card card-container">
       <h1 class="h3 mb-3 fw-normal">Recuperar contraseña</h1>
-      @if (!isSuccessful) {
+      
       <form
         name="form"
         (ngSubmit)="f.form.valid && onSubmit()"
@@ -32,17 +32,18 @@
           }
         </div>
         <div class="form-group mt-3">
-          <button class="btn btn-primary btn-block">Recuperar</button>
+          <button class="btn btn-primary btn-block" >Recuperar</button>
         </div>
   
         @if (f.submitted && isSignUpFailed) {
-        <div class="alert alert-warning">
-          Signup failed!<br />{{ errorMessage }}
+        <div class="alert alert-warning mt-3">
+          Error:<br />{{ errorMessage }}
         </div>
         }
       </form>
-      } @else {
-      <div class="alert alert-success">¡Registro exitoso!</div>
+      @if (isSuccessful) {
+        <div class="alert alert-success mt-3">Se ha enviado un código a su correo. Ingréselo para cambiar su contraseña</div>
+        <div>Si no ha recibido el correo intente nuevamente</div>
       }
     </div>
   </div>

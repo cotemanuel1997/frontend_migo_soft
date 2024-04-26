@@ -7,6 +7,9 @@ const USER_KEY = 'auth-user';
   providedIn: 'root'
 })
 export class TokenStorageService {
+
+  tokenForgotPass = ''
+
   constructor() { }
 
   signOut(): void {
@@ -35,4 +38,14 @@ export class TokenStorageService {
 
     return {};
   }
+
+  setTokenForgotPass(token: any) {
+    this.tokenForgotPass = token;
+  }
+
+  getTokenForgotPass() {
+    return this.tokenForgotPass;
+  }
+
+
 }

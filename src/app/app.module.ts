@@ -14,6 +14,8 @@ import { authInterceptorProviders } from './_helper/http.interceptor';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { ForgotComponent } from './forgot/forgot.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+import { TokenPasswordComponent } from './token-password/token-password.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ForgotComponent } from './forgot/forgot.component';
     BoardManagerComponent,
     ProfileComponent,
     BoardUserComponent,
-    ForgotComponent
+    ForgotComponent,
+    ChangePasswordComponent,
+    TokenPasswordComponent
   ],
   imports: [
     BrowserModule,

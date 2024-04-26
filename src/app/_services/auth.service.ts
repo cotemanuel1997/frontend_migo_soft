@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 
 const AUTH_API = 'http://localhost:8080/api/auth/';
@@ -37,16 +37,43 @@ export class AuthService {
     );
   }
 
-  sendEmail(to: string, subject: string, body: string): Observable<any> {
-    return this.http.post(
-      AUTH_API + 'signup',
+  sendEmail(email: string): Observable<any>{
+    return this.http.get(
+      AUTH_API + 'forgot-password',
       {
-        to,
-        subject,
-        body,
-      },
-      httpOptions
+        params : {
+          email : email
+        }
+      }
     );
+
+  
+  
+  
   }
+
+  verifyToken(token: string): Observable<any>{
+    return this.http.get(
+      AUTH_API + 'verify-token',
+      {
+        params : {
+          token : token
+        }
+      }
+    );
+
+  }
+  resetPasword(token: string, password: string): Observable<any>{
+    const params = new HttpParams()
+      .set('token', token)
+      .set('password', password);
+    return this.http.put(
+      AUTH_API + 'reset-password',
+      null, // No hay cuerpo en esta solicitud
+      { params: params } // Pasar los parámetros como opción en la solicitud
+    );
+
+  }
+
 
 }
