@@ -16,6 +16,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { TokenPasswordComponent } from './token-password/token-password.component';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TokenPasswordComponent } from './token-password/token-password.componen
     BoardUserComponent,
     ForgotComponent,
     ChangePasswordComponent,
-    TokenPasswordComponent
+    TokenPasswordComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
