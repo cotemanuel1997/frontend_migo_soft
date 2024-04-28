@@ -1,46 +1,62 @@
-<div id="app">
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">MigoSoft</a>
-    <ul class="navbar-nav me-auto" routerLinkActive="active">
-   <!--    <li class="nav-item">
-        <a href="/home" class="nav-link" routerLink="home">Home </a>
-      </li> -->
-      <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/admin" class="nav-link" routerLink="admin">Pantalla administrador</a>
-      </li>
-      
-      <li class="nav-item" *ngIf="showModeratorBoard">
-        <a href="/man" class="nav-link" routerLink="man">Pantalla gerente</a>
-      </li>
-      <li class="nav-item">
-        <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Pantalla vendedor salón</a>
-      </li>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    
 
-      <li class="nav-item" *ngIf="showAdminBoard">
-        <a href="/register" class="nav-link" routerLink="register">Registrar usuario</a>
-      </li>
-    </ul>
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">MigoSoft</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" routerLinkActive="active">
+       <!--    <li class="nav-item">
+            <a href="/home" class="nav-link" routerLink="home">Home </a>
+          </li> -->
+          <li class="nav-item" *ngIf="showAdminBoard">
+            <a href="/admin" class="nav-link" routerLink="admin">Pantalla administrador</a>
+          </li>
+          
+          <li class="nav-item" *ngIf="showModeratorBoard">
+            <a href="/man" class="nav-link" routerLink="man">Pantalla gerente</a>
+          </li>
+          <li class="nav-item">
+            <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">Pantalla vendedor salón</a>
+          </li>
 
-<!--     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
-      <li class="nav-item">
-        <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a href="/login" class="nav-link" routerLink="login">Login</a>
-      </li>
-    </ul> -->
+          <li class="nav-item" *ngIf="showAdminBoard">
+            <a href="/register" class="nav-link" routerLink="register">Registrar usuario</a>
+          </li>
+        </ul>
 
-    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
-      <li class="nav-item">
-        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
-      </li>
-      <li class="nav-item">
-        <a href class="nav-link" (click)="logout()">Cerrar sesión</a>
-      </li>
-    </ul>
+  <!--     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a href="/login" class="nav-link" routerLink="login">Login</a>
+        </li>
+      </ul> -->
+
+         <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+          <li class="nav-item">
+            <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+          </li>
+          <li class="nav-item">
+            <a href class="nav-link" (click)="logout()">Cerrar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
   </nav>
+</header>
 
-  <div class="container">
+
+<main class="flex-shrink-0">
+  <div div class="container">
     <router-outlet></router-outlet>
   </div>
-</div>
+  
+</main>
+
