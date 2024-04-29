@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     const { username, password } = this.form;
-    this.loadingService.setLoading(true);
+    //this.loadingService.setLoading(true);
     this.authService.login(username, password).subscribe({
       next: data => {
         this.tokenStorage.saveToken(data.accessToken);
@@ -40,13 +40,13 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        this.loadingService.setLoading(false);
+        //this.loadingService.setLoading(false);
         this.reloadPage();
       },
       error: err => {
         this.errorMessage = err.error.message;
         this.isLoginFailed = true;
-        this.loadingService.setLoading(false);
+        //this.loadingService.setLoading(false);
       }
     });
   }
