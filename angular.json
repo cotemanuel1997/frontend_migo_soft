@@ -37,7 +37,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "src/styles.css",
+              "css/custom.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.slim.min.js",

@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'forgot', component: ForgotComponent },
   { path: 'reset-password', component: ChangePasswordComponent },
   { path: 'token-password', component: TokenPasswordComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
