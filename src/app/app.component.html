@@ -24,14 +24,14 @@
             <a href="/home" class="nav-link" routerLink="home">Home </a>
           </li> -->
           <li class="nav-item" *ngIf="showAdminBoard">
-            <a href="/admin" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="admin" (click)="selectNavItem2($event)">Pantalla administrador</a>
+            <a href="/admin" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="admin" (click)="selectNavItem2($event)">Administrador</a>
           </li>
           
           <li class="nav-item" *ngIf="showModeratorBoard">
-            <a href="/man" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="man" (click)="selectNavItem2($event)">Pantalla gerente</a>
+            <a href="/man" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="man" (click)="selectNavItem2($event)">Gerente</a>
           </li>
           <li class="nav-item">
-            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" routerLink="user" (click)="selectNavItem2($event)">Pantalla vendedor salón</a>
+            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" routerLink="user" (click)="selectNavItem2($event)">Vendedor salón</a>
           </li>
 
           <li class="nav-item" *ngIf="showAdminBoard">
