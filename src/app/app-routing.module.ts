@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardProfessionalComponent } from './board-professional/board-professional.component';
 import { BoardManagerComponent } from './board-manager/board-manager.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'man', component: BoardManagerComponent },
   { path: 'admin', component: BoardAdminComponent },
+  { path: 'professional', component: BoardProfessionalComponent },
   { path: 'forgot', component: ForgotComponent },
   { path: 'reset-password', component: ChangePasswordComponent },
   { path: 'token-password', component: TokenPasswordComponent },

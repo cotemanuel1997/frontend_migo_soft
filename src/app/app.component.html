@@ -26,6 +26,10 @@
           <li class="nav-item" *ngIf="showAdminBoard">
             <a href="/admin" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="admin" (click)="selectNavItem2($event)">Administrador</a>
           </li>
+
+          <li class="nav-item">
+            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" routerLink="professional" (click)="selectNavItem2($event)">Talleres</a>
+          </li>
           
           <li class="nav-item" *ngIf="showModeratorBoard">
             <a href="/man" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="man" (click)="selectNavItem2($event)">Gerente</a>
@@ -34,9 +38,7 @@
             <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" routerLink="user" (click)="selectNavItem2($event)">Vendedor salón</a>
           </li>
 
-          <li class="nav-item" *ngIf="showAdminBoard">
-            <a href="/register" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="register" (click)="selectNavItem2($event)">Registrar usuario</a>
-          </li>
+
         </ul>
 
   <!--     <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
@@ -49,6 +51,9 @@
       </ul> -->
 
          <ul class="nav nav-pills" *ngIf="isLoggedIn">
+          <li class="nav-item" *ngIf="showAdminBoard">
+            <a href="/register" class="nav-link nav-item1" data-bs-toggle="pill" routerLink="register" (click)="selectNavItem1($event)">Registrar usuario</a>
+          </li>
           <li class="nav-item">
             <a href="/profile" class="nav-link nav-item1" data-bs-toggle="pill" routerLink="profile" (click)="selectNavItem1($event)">{{ username }}</a>
           </li>
@@ -71,8 +76,8 @@
 
 
 <main class="d-flex">
-  
-  <div div class="container-fluid">
+
+  <div class="container-fluid">
     <nav class="navbar navbar2" >
       <div class="n1">
         <a class="navbar-brand" href="/home">
@@ -81,8 +86,11 @@
       </div>
     
     </nav>
+  
     <router-outlet></router-outlet>
-  </div>
+  </div> 
+    
+  
   
 </main>
 

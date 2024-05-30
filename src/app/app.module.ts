@@ -17,6 +17,7 @@ import { ForgotComponent } from './forgot/forgot.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { TokenPasswordComponent } from './token-password/token-password.component';
 import { LoadingComponent } from './loading/loading.component';
+import { BoardProfessionalComponent } from './board-professional/board-professional.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LoadingComponent } from './loading/loading.component';
     ForgotComponent,
     ChangePasswordComponent,
     TokenPasswordComponent,
-    LoadingComponent
+    LoadingComponent,
+    BoardProfessionalComponent
   ],
   imports: [
     BrowserModule,
