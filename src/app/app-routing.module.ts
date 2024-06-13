@@ -12,6 +12,7 @@ import { BoardManagerComponent } from './board-manager/board-manager.component';
 import { ForgotComponent } from './forgot/forgot.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { TokenPasswordComponent } from './token-password/token-password.component';
+import { AgregarPiezaComponent } from './agregar-pieza/agregar-pieza.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'forgot', component: ForgotComponent },
   { path: 'reset-password', component: ChangePasswordComponent },
   { path: 'token-password', component: TokenPasswordComponent },
+  { path: 'agregar-pieza', component: AgregarPiezaComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

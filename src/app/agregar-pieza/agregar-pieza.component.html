@@ -1,0 +1,214 @@
+<div class="px-5 py-2 text-center db">
+   
+   <div class="col-lg-6 mx-auto my-4 vh-100">
+      <p class="fs-1 lh-lg">Pieza
+      </p>
+
+      <div class="col-md-12">
+	    <div class="card card-container">
+	      @if (!isSuccessful) {
+	      <form
+	        name="form"
+	        (ngSubmit)="f.form.valid && onSubmit()"
+	        #f="ngForm"
+	        novalidate
+	      >
+	        <div class="form-group">
+	       		<div class="row">
+	       			<div class="col">
+	       				<label for="nombre">Nombre</label>
+				          <input
+				            type="text"
+				            class="form-control"
+				            name="nombre"
+				            [(ngModel)]="form.nombre"
+				            required
+				            minlength="3"
+				            maxlength="20"
+				            #nombre="ngModel"
+				            [ngClass]="{ 'is-invalid': f.submitted && nombre.errors }"
+				          />
+				          @if (nombre.errors && f.submitted) {
+				          <div class="invalid-feedback">
+				            @if (nombre.errors['required']) {
+				            <div>El nombre es requerido</div>
+				            }
+				            @if (nombre.errors['minlength']) {
+				            <div>El nombre debe tener al menos 3 caracteres</div>
+				            }
+				            @if (nombre.errors['maxlength']) {
+				            <div>El nombre no puede tener más de 20 caracteres</div>
+				            }
+				          </div>
+				          }
+	       			</div>
+
+	       			<div class="col">
+	       				<label for="nombre">Materialidad</label>
+				          <input
+				            type="text"
+				            class="form-control"
+				            name="materialidad"
+				            [(ngModel)]="form.materialidad"
+				            required
+				            minlength="3"
+				            maxlength="20"
+				            #materialidad="ngModel"
+				            [ngClass]="{ 'is-invalid': f.submitted && materialidad.errors }"
+				          />
+				          @if (materialidad.errors && f.submitted) {
+				          <div class="invalid-feedback">
+				            @if (materialidad.errors['required']) {
+				            <div>El materialidad es requerido</div>
+				            }
+				            @if (materialidad.errors['minlength']) {
+				            <div>El materialidad debe tener al menos 3 caracteres</div>
+				            }
+				            @if (materialidad.errors['maxlength']) {
+				            <div>El materialidad no puede tener más de 20 caracteres</div>
+				            }
+				          </div>
+				          }	       				
+	       			</div>
+
+	       			<div class="col">
+	       				<label for="nombre">Taller</label>
+				          <input
+				            type="text"
+				            class="form-control"
+				            name="taller"
+				            [(ngModel)]="form.taller"
+				            required
+				            minlength="3"
+				            maxlength="20"
+				            #taller="ngModel"
+				            [ngClass]="{ 'is-invalid': f.submitted && taller.errors }"
+				          />
+				          @if (taller.errors && f.submitted) {
+				          <div class="invalid-feedback">
+				            @if (taller.errors['required']) {
+				            <div>El taller es requerido</div>
+				            }
+				            @if (taller.errors['minlength']) {
+				            <div>El taller debe tener al menos 3 caracteres</div>
+				            }
+				            @if (taller.errors['maxlength']) {
+				            <div>El taller no puede tener más de 20 caracteres</div>
+				            }
+				          </div>
+				          }	       				
+	       			</div>
+	       		</div>
+	       		<div class="row">
+	       			<div class="col">
+	       				<label for="terminacion">Terminación</label>
+				          <input
+				            type="text"
+				            class="form-control"
+				            name="terminacion"
+				            [(ngModel)]="form.terminacion"
+				            required
+				            minlength="3"
+				            maxlength="20"
+				            #terminacion="ngModel"
+				            [ngClass]="{ 'is-invalid': f.submitted && terminacion.errors }"
+				          />
+				          @if (terminacion.errors && f.submitted) {
+				          <div class="invalid-feedback">
+				            @if (terminacion.errors['required']) {
+				            <div>El terminacion es requerido</div>
+				            }
+				            @if (terminacion.errors['minlength']) {
+				            <div>El terminacion debe tener al menos 3 caracteres</div>
+				            }
+				            @if (terminacion.errors['maxlength']) {
+				            <div>El terminacion no puede tener más de 20 caracteres</div>
+				            }
+				          </div>
+				          }
+	       			</div>
+
+	       			<div class="col">
+	       				<label for="estado">Estado</label>
+				          <input
+				            type="text"
+				            class="form-control"
+				            name="estado"
+				            [(ngModel)]="form.estado"
+				            required
+				            minlength="3"
+				            maxlength="20"
+				            #estado="ngModel"
+				            [ngClass]="{ 'is-invalid': f.submitted && estado.errors }"
+				          />
+				          @if (estado.errors && f.submitted) {
+				          <div class="invalid-feedback">
+				            @if (estado.errors['required']) {
+				            <div>El estado es requerido</div>
+				            }
+				            @if (estado.errors['minlength']) {
+				            <div>El estado debe tener al menos 3 caracteres</div>
+				            }
+				            @if (estado.errors['maxlength']) {
+				            <div>El estado no puede tener más de 20 caracteres</div>
+				            }
+				          </div>
+				          }	       				
+	       			</div>
+	       			<div class="col">
+	       				<label>Acciones</label>
+	       				<div class="row">
+			       			<div class="col">
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Editar
+								  </label>
+								</div>     				
+			       			</div>
+			       			<div class="col">
+								<div class="form-check">
+								  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								  <label class="form-check-label" for="flexCheckDefault">
+								    Eliminar
+								  </label>
+								</div>     				
+			       			</div>		       					
+	       				</div>
+       				
+	       			</div>
+	       		</div>	          
+	        </div>
+
+	        <div class="form-group mt-3 d-flex justify-content-center">
+	          <button class="btn btn-bd-primary btn-block ">Registrar</button>
+	        </div>
+	  
+	        @if (f.submitted && isRegisterFailed) {
+	        <div class="alert alert-warning">
+	          Register failed!<br />{{ errorMessage }}
+	        </div>
+	        }
+	      </form>
+	      } @else {
+	      <div class="alert alert-success">¡Registro exitoso!</div>
+	      }
+	    </div>
+	  </div>
+  
+
+
+      <p></p>
+<!--        <p>
+        <a href="/login" class="btn btn-bd-primary">
+          Agregar Materialidad
+        </a>
+
+      </p> -->
+
+
+      
+    </div>
+
+   
+</div>

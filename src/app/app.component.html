@@ -27,15 +27,20 @@
             <a href="/admin" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="admin" (click)="selectNavItem2($event)">Administrador</a>
           </li>
 
-          <li class="nav-item">
-            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" routerLink="professional" (click)="selectNavItem2($event)">Talleres</a>
+          <li class="nav-item dropdown">
+            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" (click)="selectNavItem2($event)">Talleres</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="professional">Buscar pieza</a></li>
+              <li><a class="dropdown-item" href="agregar-pieza">Ingresar pieza</a></li>
+              <li><a class="dropdown-item" href="#">Ingresar materialidad</a></li>
+            </ul>
           </li>
           
           <li class="nav-item" *ngIf="showModeratorBoard">
             <a href="/man" class="nav-link nav-item2" data-bs-toggle="pill" routerLink="man" (click)="selectNavItem2($event)">Gerente</a>
           </li>
           <li class="nav-item">
-            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="isLoggedIn" routerLink="user" (click)="selectNavItem2($event)">Vendedor salón</a>
+            <a href="/user" class="nav-link nav-item2" data-bs-toggle="pill" *ngIf="showUserBoard" routerLink="user" (click)="selectNavItem2($event)">Vendedor salón</a>
           </li>
 
 

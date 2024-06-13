@@ -18,6 +18,7 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
 import { TokenPasswordComponent } from './token-password/token-password.component';
 import { LoadingComponent } from './loading/loading.component';
 import { BoardProfessionalComponent } from './board-professional/board-professional.component';
+import { AgregarPiezaComponent } from './agregar-pieza/agregar-pieza.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BoardProfessionalComponent } from './board-professional/board-professio
     ChangePasswordComponent,
     TokenPasswordComponent,
     LoadingComponent,
-    BoardProfessionalComponent
+    BoardProfessionalComponent,
+    AgregarPiezaComponent
   ],
   imports: [
     BrowserModule,
